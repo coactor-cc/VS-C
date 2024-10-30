@@ -50,18 +50,20 @@ Durability is a key consideration in our product development process. We are com
 Updates and Maintenance: Guidelines on how to keep the system up-to-date and perform routine maintenance will be included to ensure the system runs smoothly.
 
 ## use example 
-Next ill give an example to show how our manual do help user quick and easily make a recommendation
+Next I'll give an example to show how our manual help user quick and easily make a recommendation
 
-for example ，we wannna Recommend book *DIP* 
+for example,we wannna Recommend the book *DIP* 
 
-our manual give an clear catalog of your need  ,just select the right sort
+our manual give an clear catalog of your need  ,just select the right sort and jump in 
+\03 print books find detail in page 5
 
 TODO add contend  
+
+Finally you can check the principle of recomandation to make sure you submit is effective.
    
 ## feedback
 many works are done in getting  user feedbacks  
 this pages show the real user feedbacks of our manual,both positive feedbacks and suggestions exists
- 
 
 
 ## advantages
