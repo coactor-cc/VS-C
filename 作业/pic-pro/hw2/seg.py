@@ -3,7 +3,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 # 读取图像
-image = cv2.imread('血管实验数据/IMG/C.png', cv2.IMREAD_GRAYSCALE)
+image = cv2.imread('IMG/C.png', cv2.IMREAD_GRAYSCALE)
 
 # 步骤1: 应用 Canny 边缘检测
 edges = cv2.Canny(image, threshold1=100, threshold2=200)
