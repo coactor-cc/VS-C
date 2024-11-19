@@ -1,27 +1,14 @@
 ## 程序部分
 start函数
-
 update函数
-
-
 ### input monitor
 #### Getkey
 #### GetButton
-
-
 ### sprite 处理
 TODO sprite 的pivot调整和rotation
-BUG
-filp
 #### center of object match 
-
-
-
 ### timer 时间控制
-
-
 ### Fix endless jump
-finish
 #### gizmo
 Gizmo是Unity编辑器中用于可视化和调试的辅助工具，它允许开发者在Scene视图中绘制简单的几何形状、图标、文本和其他图形元素。Gizmos的主要作用包括：
 
@@ -36,5 +23,63 @@ Gizmo是Unity编辑器中用于可视化和调试的辅助工具，它允许开�
 教育和演示：在教学或演示中，Gizmos可以用来解释游戏机制，如力的作用、光线传播等。
 
 自定义编辑器工具：开发者可以创建自定义的Gizmos来增强Unity编辑器的功能，使其更适合自己的开发流程。
-### animator 状态机state machine
-![alt text](image.png)
+### finite state machine
+在C#中创建有限状态机
+
+解决stateMachine 中的套娃行为 
+
+playerState中需要包含什么成员？
+如何进行State的转换？
+player  
+包含一个  statemachine 来管理状态
+
+而状态变化的条件我应该写在什么位置？
+状态变化的条件应该写于状态机中，而不是写在状态中。状态机负责管理状态的转换，而状态的转换条件则由状态机根据当前状态和输入来决定。在状态机中，你可以定义一个方法来处理状态转换，例如：
+
+我需要一个什么样的状态机 一个状态可以切换到多个不同的状态吧应该是？
+
+1.任意时刻只能存在一个状态
+2.状态之间可以相互转换 且有不同分支
+
+```csharp
+Enity player = GetComponent<Entity>();
+
+public class Player : MonoBehaviour
+{
+    public enum State
+    {
+        Idle,
+        Running,
+        Jumping,
+        Falling,
+        Attacking,
+        Hurt,
+        Dead
+    }
+    StateMachine<State> stateMachine;
+
+    private void Start()
+    {
+        stateMachine = new StateMachine<State>(this);
+        stateMachine.AddState(State.Idle, new IdleState());
+        stateMachine.AddState(State.Running, new RunningState());
+        stateMachine.AddState(State.Jumping, new JumpingState());
+        stateMachine.AddState(State.Falling, new FallingState());
+
+
+    public State state;
+
+    private void Update()
+    {
+        switch (state)
+        {
+            case State.Idle:
+                // 处理空闲状态逻辑
+                break;
+            case State.Running:
+                // 处理跑步状态逻辑
+                break;
+
+
+
+```
