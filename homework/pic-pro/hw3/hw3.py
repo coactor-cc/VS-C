@@ -2,16 +2,9 @@
 import cv2
 import numpy as np
 import matplotlib.pyplot as plt
-import os
-
-
-# 打印当前工作目录和图像路径
-print("Current working directory:", os.getcwd())
-img_path = '\作业\pic-pro\hw3\car-moire-pattern.tif'
-print("Image file path:", os.path.abspath(img_path))
 
 # 读取图像
-img = cv2.imread(ur'D:\作业\pic-pro\hw3\car-moire-pattern.tif', cv2.IMREAD_GRAYSCALE)
+img = cv2.imread(r'D:homework\pic-pro\hw3\car-moire-pattern.tif', cv2.IMREAD_GRAYSCALE)
 
 # 获取图像尺寸
 rows, cols = img.shape
@@ -86,10 +79,10 @@ def butterworth_bandstop_filter(shape, center, D0, n):
             # 计算巴特沃斯陷波带阻滤波器的传递函数
             mask[i, j] = 1 / (1 + (D / D0) ** (2 * n))
     
-    return mask
+    return 1-mask
 
 # 设定陷波参数
-D0 = 30  # 截止频率，控制滤波器带宽
+D0 = 40  # 截止频率，控制滤波器带宽
 n = 4     # 巴特沃斯滤波器阶数，控制滤波器的锐利程度
 
 # 创建滤波器掩模

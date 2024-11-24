@@ -1,4 +1,4 @@
 {
     "Codegeex.CommitMessage.LanguagePreference": "English",
-    "Codegeex.CommitMessageStyle": "ConventionalCommits"
+    "Codegeex.CommitMessageStyle": "Auto"
 }
