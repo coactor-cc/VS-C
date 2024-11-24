@@ -110,3 +110,22 @@ class State{
 }
 
 ```
+## 地图制作
+### layer
+### background
+平行背景
+
+#### endless  bg 
+通过平移背景实现
+## cinematic studio & camera 重要
+1. 让相机跟随人物移动 body改为framing transposer aim  do nothing  player follow
+2. dumping 减缓移动
+3. lookahead time and smooth
+4. 设置deadzone
+5. 设置softzone
+
+## Audio manager
+管理音效和BGM
+### checkDuplicate
+### checkDIstance
+### 进阶 set a audio UI
