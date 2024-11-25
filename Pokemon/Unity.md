@@ -40,47 +40,74 @@ player
 
 1.任意时刻只能存在一个状态
 2.状态之间可以相互转换 且有不同分支
+3.影响状态转换的因素 input；各种参数的变化-speed transition HP etc
+
+core:游戏的核心是需要MonoBehavior 的update()函数 任意input 或者object 状态的检测都需要update()的支持
+自然，statemachine状态的转换也需要update()函数
+
+state 分为可打断 和不可打断
+interrupt :idle move 
+uninterrupt: atk jump  
+每个状态都有一个entery condition 除非它处于defult/idle 状态
+
+animator中的animation与status 差不多是一一对应
+而animator中的状态转换利用可视化condition来设置
 
 ```csharp
-Enity player = GetComponent<Entity>();
-
-public class Player : MonoBehaviour
+public class Entity : MonoBehaviour
 {
-    public enum State
-    {
-        Idle,
-        Running,
-        Jumping,
-        Falling,
-        Attacking,
-        Hurt,
-        Dead
-    }
-    StateMachine<State> stateMachine;
+    protected StateMachine stateMachine;
+    protected int HP;
+    protected int atk;
+    protected int speed;
 
     private void Start()
     {
-        stateMachine = new StateMachine<State>(this);
-        stateMachine.AddState(State.Idle, new IdleState());
-        stateMachine.AddState(State.Running, new RunningState());
-        stateMachine.AddState(State.Jumping, new JumpingState());
-        stateMachine.AddState(State.Falling, new FallingState());
-
-
-    public State state;
-
+        stateMachine.Initialize(idle);
+    }
     private void Update()
     {
-        switch (state)
-        {
-            case State.Idle:
-                // 处理空闲状态逻辑
-                break;
-            case State.Running:
-                // 处理跑步状态逻辑
-                break;
+        stateMachine.checkChange();
+    }
+}
 
 
+class StateMachine{
+    State currentState;
+
+
+    Initialize(){
+
+    }
+    public void checkChange(){
+        currentState.next
+    }
+
+}
+
+
+class State{
+    Entity entity;
+
+    protected float moveSpeed;
+    protected string animBoolName;
+
+    State():(_entity,_moveSpeed,_animBoolName){}
+
+    public void Enter(){
+        //change some attribution
+        entity.anim.SetBool(animBoolName,true);
+    }
+    public void In(){
+        
+    }
+    Public void Exit(){
+        // change some attribution
+        entity.anim.SetBool(animBoolName,false);
+        entity.statemachine.ChangeState();
+    }
+
+}
 
 ```
 ## 地图制作
