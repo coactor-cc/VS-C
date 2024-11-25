@@ -1,5 +1,4 @@
-# 池聪哲-246458-作业3
-## 教材复现
+# 池聪哲-246458-作业3🤷‍♀️
 ```python
 import cv2
 import numpy as np
@@ -185,7 +184,6 @@ plt.show()
               D = np.sqrt((i - center[0]) ** 2 + (j - center[1]) ** 2)
               mask[i, j] = np.exp(-(D ** 2) / (2 * (D0 ** 2)))
       return mask
-
   D0 = 50  # 截止频率
   mask = gaussian_lowpass_filter(img.shape, D0)
   mask = mask[:, :, np.newaxis]  # 增加一个维度
