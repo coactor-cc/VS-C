@@ -129,3 +129,83 @@ class State{
 ### checkDuplicate
 ### checkDIstance
 ### 进阶 set a audio UI
+
+### add HP bar and fix flip
+#### event
+```C#
+    //add system event
+    public System.Action onFlip;
+```
+在Unity中，使用 `System.Action` 来定义事件是一种常见的做法。下面是如何添加和使用 `onFlip` 事件的示例，包括如何触发事件和订阅事件的步骤。
+
+#### 1. 定义事件
+
+首先，在你的类中定义 `onFlip` 事件。你可以在类的顶部或构造函数中进行定义：
+
+```csharp
+using UnityEngine;
+
+public class FlipHandler : MonoBehaviour
+{
+    // 定义事件
+    public System.Action onFlip;
+
+    // 其他成员变量和方法
+}
+```
+
+#### 2. 触发事件
+
+在适当的地方（例如，当对象翻转时），你可以调用这个事件。确保在调用之前检查事件是否为 `null`，以避免空引用异常：
+
+```csharp
+public void Flip()
+{
+    // 进行翻转操作
+    // ...
+
+    // 触发事件
+    onFlip?.Invoke();
+}
+```
+
+#### 3. 订阅事件
+
+在其他类中，你可以订阅 `onFlip` 事件，以便在事件被触发时执行特定的操作。以下是一个例子：
+
+```csharp
+public class EventSubscriber : MonoBehaviour
+{
+    public FlipHandler flipHandler;
+
+    private void Start()
+    {
+        // 订阅事件
+        if (flipHandler != null)
+        {
+            flipHandler.onFlip += HandleFlip;
+        }
+    }
+
+    private void HandleFlip()
+    {
+        // 处理翻转事件
+        Debug.Log("对象已翻转！");
+    }
+
+    private void OnDestroy()
+    {
+        // 取消订阅事件以避免内存泄漏
+        if (flipHandler != null)
+        {
+            flipHandler.onFlip -= HandleFlip;
+        }
+    }
+}
+```
+
+#### 4. 使用示例
+
+在Unity编辑器中，将 `FlipHandler` 和 `EventSubscriber` 组件添加到不同的GameObject上，并在 `EventSubscriber` 中引用 `FlipHandler` 的实例。然后，当你调用 `FlipHandler` 中的 `Flip()` 方法时，`EventSubscriber` 中的 `HandleFlip()` 方法将被调用。
+
+

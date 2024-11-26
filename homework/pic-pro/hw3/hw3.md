@@ -173,7 +173,6 @@ plt.show()
   # 应用傅里叶变换
   dft = cv2.dft(np.float32(img_noisy), flags=cv2.DFT_COMPLEX_OUTPUT)
   dft_shift = np.fft.fftshift(dft)
-
   # 创建高斯低通滤波器
   def gaussian_lowpass_filter(shape, D0):
       rows, cols = shape
