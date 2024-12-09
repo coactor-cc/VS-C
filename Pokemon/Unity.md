@@ -207,5 +207,5 @@ public class EventSubscriber : MonoBehaviour
 #### 4. 使用示例
 
 在Unity编辑器中，将 `FlipHandler` 和 `EventSubscriber` 组件添加到不同的GameObject上，并在 `EventSubscriber` 中引用 `FlipHandler` 的实例。然后，当你调用 `FlipHandler` 中的 `Flip()` 方法时，`EventSubscriber` 中的 `HandleFlip()` 方法将被调用。
-
+ 
 
