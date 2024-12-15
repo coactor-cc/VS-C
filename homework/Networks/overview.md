@@ -23,7 +23,7 @@
 ### delay
 ### throughput
 
-# U2 Network Layer
+# U2 Network Layer:data plane
 ## overview 
 ## whats inside a router
 ### input ports 
@@ -56,7 +56,7 @@ Three cornerstone beliefs:
 simple connectivity
 IP protocol: that narrow waist
 intelligence, complexity at network edge
-# U3.4 Control Plane
+# U3 Network Layer:Control Plane
 ## intro 
 ### classification
 ## routing protocols
@@ -87,7 +87,7 @@ interface layer to network /network-wide state /communication
 ### SNMP
 ### NETCONF
 
-# U5 Transport Layer
+# U4 Transport Layer
 ## service 
 ## addressing 
 IP+Port number
@@ -98,3 +98,23 @@ IP+Port number
 ### rdt 2.0 ARQ
 ### GBN & SR
 ## TCP
+### Shake hands
+### Close connection
+### Flow control 
+### Congestion control 
+
+# U5 Link layer
+## intro 
+broadcast(Ethernet、WLAN) or PPP    
+### service
+#### framing 
+#### reliable delivery
+#### error detection
+## Multiple access links & protocol
+### CSMA/CD
+## LANS
+### Ethernet  
+### switches
+#### STP
+### VLANs
+## link virtualization:MPLS
