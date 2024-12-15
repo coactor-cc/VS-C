@@ -1,7 +1,42 @@
+# U1 Intro
+## What is Internet?What is a protocol?
+### Internet Architecture Management
+### Domain Name Management
+### Internet Standards
+#### RFC
+#### IETF
+
+## Network Edge 
+### host
+### Access networks
+#### access approach
+#### home networks
+#### wireless networks
+### Physical Media
+#### Links
+#### simplex&duplex
+## Network Core
+### packet/circuit switching
+### Internet Structure
+## Performance
+### loss
+### delay
+### throughput
+
+# U2 Network Layer
+## overview 
+## whats inside a router
+### input ports 
+### switching fabric
+### output ports
 ## IP
-### 
-###
-###
+### datagram format 
+### Addressing
+#### Subnet  
+#### CIDR
+无类别域间路由
+#### DHCP
+### NAT (networks address translation)
 ### IPv6
 #### PDU
 #### extension headers-8octet*x
@@ -21,7 +56,7 @@ Three cornerstone beliefs:
 simple connectivity
 IP protocol: that narrow waist
 intelligence, complexity at network edge
-# U3 Control Plane
+# U3.4 Control Plane
 ## intro 
 ### classification
 ## routing protocols
@@ -52,7 +87,7 @@ interface layer to network /network-wide state /communication
 ### SNMP
 ### NETCONF
 
-# U4 Transport Layer
+# U5 Transport Layer
 ## service 
 ## addressing 
 IP+Port number
