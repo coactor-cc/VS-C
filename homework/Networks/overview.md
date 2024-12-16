@@ -22,7 +22,9 @@
 ### loss
 ### delay
 ### throughput
-
+## Secuirity
+## Layer
+## History
 # U2 Network Layer:data plane
 ## overview 
 ## whats inside a router
@@ -46,11 +48,11 @@
 #### minimum MTU-path MTU
 #### path MTU discovery-ICMP
 #### application
-### SDN-gemeralized forwarding
-#### match+action
-#### OpenFlow abstration
-### Middlebox
-### Architecture
+## SDN-gemeralized forwarding
+### match+action
+### OpenFlow abstration
+## Middlebox
+## Architecture
 the goal is connectivity, the tool is the Internet Protocol, and the intelligence is end to end rather than hidden in the network.”
 Three cornerstone beliefs:
 simple connectivity
@@ -88,13 +90,14 @@ interface layer to network /network-wide state /communication
 ### NETCONF
 
 # U4 Transport Layer
-## service 
-## addressing 
+## overview
+### service 
+### addressing 
 IP+Port number
-## socket Multiplexing/demultiplexing
+### socket Multiplexing/demultiplexing
 ## UDP 
 ### Header & CheckSum
-## TCP & Principles of reliable data transfer 
+##  Principles of reliable data transfer 
 ### rdt 2.0 ARQ
 ### GBN & SR
 ## TCP
@@ -112,9 +115,23 @@ broadcast(Ethernet、WLAN) or PPP
 #### error detection
 ## Multiple access links & protocol
 ### CSMA/CD
+### CSMA/CA
 ## LANS
 ### Ethernet  
 ### switches
 #### STP
 ### VLANs
 ## link virtualization:MPLS
+## VPN
+
+# U6 Wireless & Mobile
+## overview
+## wireless LAN
+### 802.11
+### 802.11ac
+### 802.11ax
+## cellular networks
+### 3GPP
+### 5G
+## mobile IP
+## wireless mesh networks
