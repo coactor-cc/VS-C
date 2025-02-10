@@ -1,4 +1,4 @@
-# 池聪哲-246458-作业3🤷‍♀️
+# 池聪哲-246458-作业3
 ```python
 import cv2
 import numpy as np
@@ -29,7 +29,7 @@ plt.figure(figsize=(10, 5))
 plt.subplot(132), plt.imshow(magnitude_spectrum_8u, cmap='gray')
 plt.axis('off')
 ```
-![alt text](image.png)
+![alt text](IMG/image.png)
 ```python
 # 用于存储点击的点的坐标
 noise_centers = []
@@ -79,7 +79,7 @@ for center in noise_centers:
 plt.xticks([]), plt.yticks([])
 plt.show()
 ```
-![alt text](image-1.png)
+![alt text](IMG/image-1.png)
 ```python
 # 巴特沃斯陷波带阻滤波器函数
 def butterworth_bandstop_filter(shape, center, D0, n):
@@ -122,7 +122,7 @@ plt.subplot(224), plt.imshow(magnitude_spectrum_filtered, cmap='gray')
 plt.title('Filtered Spectrum'), plt.xticks([]), plt.yticks([])
 plt.show()
 ```
-![alt text](image-2.png)
+![alt text](IMG/image-2.png)
 ```python
 # 逆傅里叶变换
 f_ishift = np.fft.ifftshift(fshift)
@@ -138,7 +138,7 @@ plt.title('Image after Filtering'), plt.xticks([]), plt.yticks([])
 plt.show()
 
 ```
-![alt text](image-3.png)
+![alt text](IMG/image-3.png)
 ## 调研
 频域变换是一种常用于图像处理的技术，通过将图像从空间域（即像素级）转换到频域（即频率级）来进行分析和处理。频域变换主要使用傅里叶变换（Fourier Transform）及其变体，如离散傅里叶变换（DFT）和离散余弦变换（DCT）。频域分析可以帮助我们从不同的角度观察图像特征，许多经典的图像处理算法和应用都依赖于频域变换。
 
