@@ -49,7 +49,7 @@ x_4 & y_4 & 1 & -1 & 0 & 0 & -x_4'x_4 & -x_4'y_4 \\
 ## 作业 例2-10
 ### 原图像
 选择了四个约束点
-![](./image.jpg)
+![](imgs/image.jpg)
 进行透视变换
 ```python
 # 获取图像尺寸
@@ -64,7 +64,7 @@ M = cv2.getPerspectiveTransform(pts1, pts2)
 img_T= cv2.warpPerspective(img, M, (width, height))
 ```  
 变换图像
-![alt](./image_T.jpg)
+![alt](imgs/image_T.jpg)
 确定原图像和变换图像约束点坐标(8个)
 ```python
 ## 选点函数
@@ -97,11 +97,11 @@ M = cv2.getPerspectiveTransform(pts2, pts1)
 aligned_image = cv2.warpPerspective(img_T, M, (img.shape[1], img.shape[0]))
 ```
 配准后图像
-![alt](./align_image.jpg)
+![alt](imgs/align_image.jpg)
 作差看误差
 ```python
 # 计算两幅图像的像素差异
 diff_image = cv2.absdiff(img, aligned_image)
 ```
 误差图像
-![alt](./diff_image.jpg)
+![alt](imgs/diff_image.jpg)

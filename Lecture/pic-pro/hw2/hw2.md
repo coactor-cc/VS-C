@@ -19,7 +19,7 @@ plt.title('原图像')
 plt.axis('off')
 plt.show()
 ```
-![alt text](image-1.png)
+![alt text](IMG/image-1.png)
 #### 2.1 图像反转
 图像反转是通过将每个像素的灰度值进行反转来改变图像的对比度。例如，对于灰度图像，反转操作将原图像的亮区转为暗区，暗区转为亮区。这可以突出血管区域，因为血管通常比背景亮。
 ```python
@@ -31,7 +31,7 @@ plt.title('反转后的图像')
 plt.axis('off')
 plt.show()
 ```
-![alt text](image-2.png)
+![alt text](IMG/image-2.png)
 #### 2.3 幂律（伽马）变换
 伽马变换通过调整图像的亮度，使得图像的高亮区域更亮，暗区域更暗。这有助于增强血管区域。
 ```python
@@ -44,7 +44,7 @@ plt.title('伽马变换后的图像')
 plt.axis('off')
 plt.show()
 ```
-![alt text](image-3.png)
+![alt text](IMG/image-3.png)
 ### 3. 空间滤波
 空间滤波操作通常用于图像的平滑（低通滤波）和锐化（高通滤波），它们有助于增强图像的局部特征
 #### 3.1 低通滤波（平滑）
@@ -69,8 +69,8 @@ plt.title('高斯滤波后的图像')
 plt.axis('off')
 plt.show()
 ```
-![alt text](image-4.png)
-![alt text](image-5.png)
+![alt text](IMG/image-4.png)
+![alt text](IMG/image-5.png)
 #### 3.2 高通滤波（锐化）
 高通滤波器常用于突出图像中的边缘特征，例如血管的边界。常用的高通滤波器有 拉普拉斯滤波器 和 Sobel算子。
 ```python
@@ -109,9 +109,9 @@ plt.axis('off')
 plt.show()
 
 ```
-![alt text](image-6.png)
-![alt text](image-7.png)
-![alt text](image-11.png)
+![alt text](IMG/image-6.png)
+![alt text](IMG/image-7.png)
+![alt text](IMG/image-11.png)
 
 ### 4. 形态学操作
 形态学处理有助于进一步增强或分割血管区域，例如通过腐蚀、膨胀等操作来去除小的噪声或者连接断开的血管部分。
@@ -130,7 +130,7 @@ plt.title('操作后的图像')
 plt.axis('off')
 plt.show()
 ```
-![alt text](image-10.png)
+![alt text](IMG/image-10.png)
 
 ## 血管专用图像增强算法
 ### 介绍
@@ -208,4 +208,4 @@ if __name__ == '__main__':
     main()
 ```
 #### 输出结果
-![alt text](image.png)
+![alt text](IMG/image.png)
