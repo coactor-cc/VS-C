@@ -11,6 +11,11 @@ L(y,\hat{y}) = \frac{1}{n}\sum_{i=1}^{n}(y_i-\hat{y}_i)^2 + \lambda\sum_{i=1}^{n
 $$  
 ![alt text](ML_Imgs/image-1.png)
 ## loss
+平均绝对误差(MAE)
+$$
+L(y,\hat{y}) = \frac{1}{n}\sum_{i=1}^{n}|y_i-\hat{y}_i|
+$$
+
 均方误差(MSE)  
 $$
 L(y,\hat{y}) = \frac{1}{n}\sum_{i=1}^{n}(y_i-\hat{y}_i)^2
@@ -25,6 +30,7 @@ $$
 ## optimization
 
 ### gradient descent
+> 针对一个输入？还是针对所有输入？看Loss function，实践一个batch更新一次
 $$
 \hat{y}^{(t+1)} = \hat{y}^{(t)} - \eta \frac{\partial L(y,\hat{y})}{\partial \hat{y}}
 $$
@@ -65,19 +71,48 @@ $$
 $$
 L(y,\hat{y}) = -\sum_{i=1}^{n}y_i\ln(\hat{y}_i)+(1-y_i)\ln(1-\hat{y}_i)
 $$
-## multi-class
 
+
+$$
+L(y,\hat{y}) = -\sum_{i=1}^{n}y_i\ln(\hat{y}_i)
+$$
+## multi-class
+### softmax
+$$
+\hat{y}_i = \frac{e^{z_i}}{\sum_{j=1}^{n}e^{z_j}}
+$$
 
 # Deep learning
-
-## softmax
+## activation function
+### sigmoid
 $$
-softmax(z_i) = \frac{e^{z_i}}{\sum_{j=1}^{n}e^{z_j}}
+\sigma(x) = \frac{1}{1+e^{-x}}
+$$
+### tanh
+$$
+\tanh(x) = \frac{e^x-e^{-x}}{e^x+e^{-x}}
+$$
+### ReLU
+$$
+f(x) = \begin{cases}
+x, & x>0\\
+0, & x\leq 0
+\end{cases}
 $$
 
-## cross entropy loss
+## CNN
+- much patterns are much smaller than the whole image
+- the same patterns appear in different regions of the image
 
-$$
-L(y,\hat{y}) = -\sum_{i=1}^{n}y_i\log(\hat{y}_i)
-$$
+不能处理影响放大缩小的问题 
 
+### Recepyive field
+typcally small, 3x3 or 5x5,consider all channels 
+Sride: 1 or 2
+### parameter sharing
+same filter applied to all the input channels
+
+### pooling
+max pooling, average pooling
+
+### Flatten
