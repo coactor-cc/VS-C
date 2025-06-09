@@ -116,3 +116,8 @@ same filter applied to all the input channels
 max pooling, average pooling
 
 ### Flatten
+
+## Self-attention
+sequence labeling
+seq2seq task
+## Transformer
