@@ -117,7 +117,84 @@ max pooling, average pooling
 
 ### Flatten
 
-## Self-attention
-sequence labeling
-seq2seq task
-## Transformer
+## RNN
+
+## GNN
+### Aggregation
+
+空间域（Spatial-based）
+| 聚合方式         | 方法                 |
+| ------------ | ------------------ |
+| Sum          | NN4G               |
+| Mean         | DCNN、DGC、GraphSAGE |
+| Weighted Sum | MoNET、GAT、GIN      |
+| LSTM         | GraphSAGE          |
+| Max Pooling  | GraphSAGE          |
+
+频谱域（Spectral-based）
+- ChebNet
+- GCN
+- HyperGCN
+## Residual connection Method
+TODO  
+input+output
+## Self-attention Method
+
+
+## Seq2seq Model&Transformer
+application:  
+ machine translation/multi-label classification/speech recognition/Chatbot/Most NLP Q&A tasks/object detection  
+![alt text](ML_Imgs/image-3.png)
+### encoder
+input: $x_1,x_2,...,x_n$   
+output: $z_1,z_2,...,z_n$
+
+#### transformer encoder:
+add:input + output  
+norm:layer norm
+
+
+### decoder
+input: $z_1,z_2,...,z_n$
+output: $y_1,y_2,...,y_m$
+#### transformer decoder:
+auto-regerssive:$y_i$ depends on $y_1,y_2,...,y_{i-1}$ and $z_1,z_2,...,z_n$
+
+# Generative Model
+面对同一输入，我们需要不同的输出都是对的
+## GAN(Generative Adversarial Network)
+- unconditional GAN
+- conditional GAN
+
+### generator
+optimalization object：存在问题：在连续分布上两个分布的divergence难以计算
+$$
+G^*=arg \min_G Div(P_{G},P_{data})
+$$
+使用sample来解决问题，相当于用nn训练了一个divergence函数,用来maximize Object function
+> maximize: Object function;minimize: loss function
+$$
+D^*=arg \max_D VP_{G},P_{data})\\
+V(P_{G},P_{data}) = E_{x\sim P_{data}}[\log D(x)] + E_{x\sim P_{G}}[\log(1-D(x))]
+$$
+
+### discriminator
+input: images:real and fake images  
+output:scalar: probability of being real  
+use classifier(superviesd) or regerssion to implement discriminator  
+存在问题：real和fake 非常容易区分 正确率几乎都是100%，导致generator训练不充分
+### wasserstein distance(WGAN) cd
+smallest distance between two distributions  
+
+等价问题
+$$
+D^*=arg \max_{D\in 1-Lipshitz} E_{x\sim P_{data}}[D(x)] - E_{x\sim P_{G}}[D(x)]
+$$  
+如何确保$D\in 1-Lipshitz$? spectral Normalization(SNGAN)
+### Algorithm
+- initialize generator and discriminator
+- repeat:
+  -fix generator G,and train discriminator D
+    discriminator D is trained to maximize the probability of assigning the correct label to real images and fake images
+  -fix discriminator D,and train generator G
+    generator G is trained to maximize the probability of assigning the correct label to fake images
