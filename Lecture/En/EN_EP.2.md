@@ -1,7 +1,17 @@
 ## Academic Writing U1
+### language register
+- static
+- formal 
+- consultative
+- casual 
+- personal
+### formal features
 - is more objective;
 - is more complex;
 - has a more formal structure;
+- passive voice;
+- third person;
+- nominalization;
 - uses more referencing.
 ### type 
 - essay;
@@ -139,6 +149,10 @@ show similarity and difference
 - alternating
 
 ## Discussion
+
+The discussion section of a research paper focuses on making claims and then adding support for those claims. 
+
+What are claims? Claims are statements about ideas and data from you and other people.
 ### structure
 7 elements
 -
@@ -158,7 +172,38 @@ show similarity and difference
 - State the conclusions that can be drawn from your results in light of these considerations
 ### how to end
 
-## Conclusion
 
-### elemenrs
+### causes and effects
 
+### strength and weak claim
+strength claim: the claim is supported by strong evidence and is likely to be true.
+| 类别  | 词汇                                                                                                                 |
+| --- | ------------------------------------------------------------------------------------------------------------------ |
+| 名词  | certainty; evidence                                                                                                |
+| 动词  | show; prove; establish; confirm; conclude; determine                                                               |
+| 形容词 | key; central; crucial; basic; fundamental; major; principal; essential; significant                                |
+| 副词  | very; pretty; quite; clearly; obviously; undoubtedly; certainly; indeed; inevitably; invariably; always; literally |
+
+weak claim: the claim is supported by weak evidence and is less likely to be true.
+| 类别 | 词汇                                                                                                              |
+| -- | --------------------------------------------------------------------------------------------------------------- |
+| 动词 | appear; argue; doubt; estimate; seen (as); seem; speculate; suggest                                             |
+| 副词 | largely; likely; mainly; maybe; perhaps; possibly; probably; rather; relatively; seemingly; somewhat; sometimes |
+### paraphrase
+
+## Conclution 
+
+
+
+## Publication 
+### abstract
+informative /structure
+### keywords
+disicipline/topic/method/Datasource (3-5) 
+### References
+IEEE style/APA style/MLA style
+### Acknowledgements
+two types:
+- i) on dissertation:acknowledgements to people who have helped you in your research; 
+- ii) one paper:acknowledgements to the funding body that has supported your research.
+### submitting cover letter
