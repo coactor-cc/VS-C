@@ -198,3 +198,41 @@ $$
     discriminator D is trained to maximize the probability of assigning the correct label to real images and fake images
   -fix discriminator D,and train generator G
     generator G is trained to maximize the probability of assigning the correct label to fake images
+
+
+# Self-supervised learning
+![ ](ML_Imgs/image-5.png)
+
+## BERT-pretraining
+BERT: Bidirectional Encoder Representations from Transformers
+
+masking input：randomly mask
+
+输出每个token都是一个distributed representation:contextualized word embedding
+
+next sentence prediction(NSP):判断两个句子是否是连续的
+CLS token
+
+bert只学会做填空题
+
+
+multi-lingual BERT:
+![alt text](ML_Imgs/image-4.png)
+### Downstream task-fine-tuning
+
+### 测试pretrained model的performance
+benchmark corpus(基准语料库)  
+GLUE: General Language Understanding Evaluation
+
+### how to use BERT
+Sentiment Analysis  
+Extractive Question Answering
+
+## pre-train  a seq2seq model
+
+## GPT
+预训练任务：pridict next token
+
+can do generation
+## 下游任务
+prompting
