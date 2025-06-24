@@ -198,7 +198,8 @@ $$
     discriminator D is trained to maximize the probability of assigning the correct label to real images and fake images
   -fix discriminator D,and train generator G
     generator G is trained to maximize the probability of assigning the correct label to fake images
-
+## Cycle-GAN
+TODO
 
 # Self-supervised learning
 ![ ](ML_Imgs/image-5.png)
@@ -236,3 +237,6 @@ Extractive Question Answering
 can do generation
 ## 下游任务
 prompting
+
+## Auto-encoder(2006)
+TODO 
