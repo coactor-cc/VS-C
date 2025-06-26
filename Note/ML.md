@@ -239,4 +239,12 @@ can do generation
 prompting
 
 ## Auto-encoder(2006)
-TODO 
+![alt text](ML_Imgs/image-6.png)
+### feature disentangle  
+
+### discrete latent representation learning
+e.g. VQ-VAE   
+![alt text](ML_Imgs/image-7.png)  
+### anomaly detection(异常检测)
+能不能当成二元分类问题？无法收集资料，异常资料太少 one class classification  
+利用reconstruction error来判断是否异常
